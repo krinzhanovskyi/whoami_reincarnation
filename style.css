@@ -1,0 +1,76 @@
+/* did by gemini */
+:root {
+  --bg-color: #050505;
+  --text-color: #00ff41;
+  --glow: 0 0 8px rgba(0, 255, 65, 0.6);
+  --font-main: "Fira Code", "Courier New", Courier, monospace;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--font-main);
+  font-size: 16px;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.scanlines {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%);
+  background-size: 100% 4px;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.terminal-window {
+  position: relative;
+  z-index: 5;
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  text-shadow: var(--glow);
+}
+
+.output-text {
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+.input-line {
+  display: flex;
+  align-items: center;
+}
+
+.prompt {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.cursor {
+  display: inline-block;
+  width: 10px;
+  height: 18px;
+  background-color: var(--text-color);
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
