@@ -30,9 +30,11 @@ This project is a web-based portfolio designed to look and function like a class
 ## Quick Start
 
 1. Clone the repository:
+
    ```bash
    git clone git@github.com:YourUsername/whoami_reincarnation.git
    ```
+
 2. Open `index.html` in any modern web browser.
 3. Type `help` in the terminal prompt and press **Enter** to see available commands.
 
