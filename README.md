@@ -17,14 +17,14 @@ This project is a web-based portfolio designed to look and function like a class
 ```bash
 /
 ├── LICENSE 		# Project license
-├── README.md 	# Project documentation
+├── README.md 	   # Project documentation
 ├── app.js 			# Core terminal engine and input handling
-├── config.js 	# Data store containing all portfolio content
+├── config.js 	   # Data store containing all portfolio content
 ├── draft.html 	# Initial structural wireframe (HTML only)
 ├── index.html 	# Main DOM structure and UI layout
-├── matrix.js 	# Canvas animation logic for the background
-├── script.js 	# Legacy logic script (initial iteration)
-└── style.css 	# CRT effects, terminal styling, and animations
+├── matrix.js 	   # Canvas animation logic for the background
+├── script.js 	   # Legacy logic script (initial iteration)
+└── style.css 	   # CRT effects, terminal styling, and animations
 ```
 
 ## Quick Start
