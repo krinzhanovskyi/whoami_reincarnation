@@ -82,3 +82,41 @@ body {
   z-index: 1;
   opacity: 0.15;
 }
+
+/* mobile version */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #005511;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-color);
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+
+  .terminal-window {
+    margin: 10px auto;
+    padding: 15px;
+  }
+
+  #cmd-input {
+    font-size: 14px;
+  }
+
+  .prompt {
+    margin-right: 5px;
+  }
+}

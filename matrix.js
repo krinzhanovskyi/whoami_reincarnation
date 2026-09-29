@@ -32,8 +32,8 @@ function drawMatrix() {
     drops[i]++;
   }
 }
-
-setInterval(drawMatrix, 33);
+// speed
+setInterval(drawMatrix, 80);
 
 // handle resize
 window.addEventListener("resize", () => {
