@@ -18,10 +18,8 @@ This project is a web-based portfolio designed to look and function like a class
 /
 ├── LICENSE # Project license
 ├── README.md # Project documentation
-├── app.js # Core terminal engine and input handling
-├── config.js # Data store containing all portfolio content
-├── draft.html # Initial structural wireframe (HTML only)
 ├── index.html # Main DOM structure and UI layout
+├── app.js # Core terminal engine and input handling
 ├── matrix.js # Canvas animation logic for the background
 ├── script.js # Legacy logic script (initial iteration)
 └── style.css # CRT effects, terminal styling, and animations
