@@ -8,7 +8,6 @@ This project is a web-based portfolio designed to look and function like a class
 
 ## Features
 
-- **Interactive CLI:** Navigate the portfolio using commands (e.g., `whoami`, `projects`, `skills`, `clear`).
 - **Retro Aesthetics:** Custom CSS scanlines, text-shadow glowing effects, and a dynamic Matrix digital rain background rendered on an HTML5 `<canvas>`.
 - **Modular Architecture:** Clean separation of concerns. Data is decoupled from logic, allowing easy content updates without modifying the core engine.
 
