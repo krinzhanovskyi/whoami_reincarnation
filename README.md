@@ -20,7 +20,6 @@ This project is a web-based portfolio designed to look and function like a class
 ├── index.html # Main DOM structure and UI layout
 ├── app.js # Core terminal engine and input handling
 ├── matrix.js # Canvas animation logic for the background
-├── script.js # Legacy logic script (initial iteration)
 └── style.css # CRT effects, terminal styling, and animations
 ```
 
