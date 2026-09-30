@@ -3,23 +3,306 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Alex_K // Terminal_OS</title>
+    <title>reincarnation | whoami</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="favicon.png" />
   </head>
-  <body>
+  <body class="p-3 sm:p-8">
     <canvas id="matrix-canvas"></canvas>
     <div class="scanlines"></div>
+    <div class="flicker"></div>
 
-    <div class="terminal-window">
-      <div id="output"></div>
-
-      <div class="input-line" id="input-line" style="display: none">
-        <span class="prompt">root@alex-dev:~#</span>
-        <span class="cursor">_</span>
+    <main
+      class="terminal-window w-full max-w-4xl rounded-md p-6 sm:p-10 shadow-2xl relative my-8"
+    >
+      <div
+        class="flex items-center justify-between border-b border-green-900/60 pb-3 mb-6"
+      >
+        <div class="flex space-x-2">
+          <div
+            class="w-3 h-3 rounded-full bg-red-900/80 border border-red-700"
+          ></div>
+          <div
+            class="w-3 h-3 rounded-full bg-yellow-900/80 border border-yellow-700"
+          ></div>
+          <div
+            class="w-3 h-3 rounded-full bg-green-900/80 border border-green-700"
+          ></div>
+        </div>
+        <div
+          class="text-xs text-green-700 select-none tracking-widest font-mono"
+        >
+          reincarnation@zrh-node:~$
+        </div>
       </div>
-    </div>
 
-    <script src="config.js"></script>
+      <header class="mb-10">
+        <h1
+          class="text-2xl sm:text-4xl md:text-5xl mb-3 tracking-tighter uppercase font-bold"
+        >
+          <span class="glitch" data-text="Oleksandr Krizhanovskyi"
+            >Oleksandr Krizhanovskyi</span
+          >
+        </h1>
+        <div
+          class="text-xs sm:text-sm text-green-400 opacity-90 font-mono flex items-center min-h-[1.5rem]"
+        >
+          <span class="text-gray-500 mr-2">SYS_MSG></span>
+          <span id="typing-subtitle"></span
+          ><span class="cursor" id="main-cursor"></span>
+        </div>
+      </header>
+
+      <!-- whoami -->
+      <section class="mb-8 group">
+        <h2 class="text-lg sm:text-xl font-bold mb-3 flex items-center">
+          <span class="text-gray-500 mr-2">reincarnation@nzz:~$</span>
+          <span class="border-b border-[#00ff41]">whoami</span>
+        </h2>
+        <div
+          class="pl-2 sm:pl-6 border-l-2 border-green-900/40 group-hover:border-green-600 transition-colors duration-300"
+        >
+          <p class="mb-2 leading-relaxed text-gray-300">
+            My name is Alex, and I’m an intern at
+            <span class="text-white font-semibold"
+              >Neue Zürcher Zeitung AG (NZZ)</span
+            >
+            in the applications development. My portfolio includes more than 10 projects, primarily written in Python.
+            I am skilled in Python, HTML, CSS, C++, and JavaScript also I have worked with Arduino. 
+          <p class="leading-relaxed text-gray-300">
+            My skills include quick learning and focus; 
+            while creating projects and working on new tasks, 
+            I learn quickly and complete assignments without delay.
+          </p>
+          </p>
+        </div>
+      </section>
+
+      <!-- skills.sh -->
+      <section class="mb-8 group">
+        <h2 class="text-lg sm:text-xl font-bold mb-4 flex items-center">
+          <span class="text-gray-500 mr-2">reincarnation@nzz:~$</span>
+          <span class="border-b border-[#00ff41]">./skills.sh --all</span>
+        </h2>
+        <div
+          class="pl-2 sm:pl-6 border-l-2 border-green-900/40 group-hover:border-green-600 transition-colors duration-300"
+        >
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm">
+            <div>
+              <span class="text-green-500 font-bold">[*] Languages:</span>
+              <span class="text-white"
+                >Python, JavaScript, SQL, HTML/CSS, C++ (Arduino), VBA</span
+              >
+            </div>
+            <div>
+              <span class="text-green-500 font-bold"
+                >[*] Backend & Network:</span
+              >
+              <span class="text-white"
+                >TCP/IP Sockets, Multithreading, REST APIs</span
+              >
+            </div>
+            <div>
+              <span class="text-green-500 font-bold"
+                >[*] GUI & Automation:</span
+              >
+              <span class="text-white"
+                >PyQt6, CustomTkinter, Desktop Hooking</span
+              >
+            </div>
+            <div>
+              <span class="text-green-500 font-bold"
+                >[*] Data & Machine Learning:</span
+              >
+              <span class="text-white"
+                >Linear Regression, Pandas, NumPy, Prompt Engineering</span
+              >
+            </div>
+            <div>
+              <span class="text-green-500 font-bold">[*] Environment:</span>
+              <span class="text-white"
+                >Windows, WSL2 (Ubuntu, Fedora), VS Code, Git/SSH, uv,
+                Docker</span
+              >
+            </div>
+            <div>
+              <span class="text-green-500 font-bold">[*] Community:</span>
+              <span class="text-white"
+                >Technical Community Management (Discord, Telegram)</span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- education.log -->
+      <section class="mb-8 group">
+        <h2 class="text-lg sm:text-xl font-bold mb-4 flex items-center">
+          <span class="text-gray-500 mr-2">reincarnation@nzz:~$</span>
+          <span class="border-b border-[#00ff41]">cat education.log</span>
+        </h2>
+        <div
+          class="pl-2 sm:pl-6 border-l-2 border-green-900/40 group-hover:border-green-600 transition-colors duration-300 space-y-4 text-sm"
+        >
+          <div>
+            <div class="text-white font-semibold">
+              VET Apprenticeship: Application Developer (Informatiker EFZ)
+            </div>
+            <div class="text-green-400">
+              Neue Zürcher Zeitung AG (NZZ)
+              <span class="text-gray-400">— in coop with BBW & ZLI</span>
+            </div>
+            <div class="text-gray-500 text-xs">
+              Zurich, Switzerland | 2026 - Present
+            </div>
+          </div>
+          <div>
+            <div class="text-white font-semibold">
+              10th School Year (Technology & Computer Science)
+            </div>
+            <div class="text-green-400">Fachschule Viventa</div>
+            <div class="text-gray-500 text-xs">
+              Zurich, Switzerland | 2025 - 2026
+            </div>
+          </div>
+          <div>
+            <div class="text-white font-semibold">
+              Secondary School (Sekundarstufe)
+            </div>
+            <div class="text-green-400">Schule Im Birch</div>
+            <div class="text-gray-500 text-xs">
+              Zurich, Switzerland | 2023 - 2025
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- projects -->
+      <section class="mb-8 group">
+            <h2 class="text-lg sm:text-xl font-bold mb-4 flex items-center">
+                <span class="text-gray-500 mr-2">reincarnation@nzz:~$</span> 
+                <span class="border-b border-[#00ff41]">ls -la ./projects/</span>
+            </h2>
+            <div class="pl-2 sm:pl-6 border-l-2 border-green-900/40 group-hover:border-green-600 transition-colors duration-300 space-y-5 text-sm">
+              <div>
+                <div class="text-white font-semibold flex items-center justify-between">
+                  <span>Parser Project</span>
+                  <span class="text-xs text-gray-500">Aug 2026 - Oct 2026</span>
+                </div>
+                  <p class="text-gray-300 mt-1 leading-relaxed">
+    Developed a Python command-line utility for securely parsing and cleaning financial transaction data from CSV files. 
+    Designed a modular architecture using <code class="text-green-400 bg-green-950/40 px-1 rounded font-mono">dataclasses</code> 
+    with a strict separation of logic. Set up exception handling and wrote unit tests to verify edge cases and protect against invalid data. 
+                  </p>
+              </div>
+                <div>
+                    <div class="text-white font-semibold flex items-center justify-between">
+                        <span>Discord Server for Web3 Community</span>
+                        <span class="text-xs text-gray-500">Mar 2025 - Aug 2025</span>
+                    </div>
+                    <p class="text-gray-300 mt-1 leading-relaxed">
+                        Managed a Web3 community infrastructure, lifting active engagement by <strong class="text-green-400">50%</strong>. Built automated moderation workflows and integrated blockchain wallet verification interfaces.
+                    </p>
+                </div>
+                <div>
+                    <div class="text-white font-semibold flex items-center justify-between">
+                        <span>Discord Task & Workflow Bot</span>
+                        <span class="text-xs text-gray-500">May 2025</span>
+                    </div>
+                    <p class="text-gray-300 mt-1 leading-relaxed">
+                        Engineered an asynchronous task automation bot supporting slash commands, integrated an <strong class="text-green-400">SQLite</strong> database for data persistence, and designed scheduled background worker alerts.
+                    </p>
+                </div>
+                <div>
+                    <div class="text-white font-semibold flex items-center justify-between">
+                        <span>Python Low-Level Backend Architecture</span>
+                        <span class="text-xs text-gray-500">Nov 2024 - Jan 2025</span>
+                    </div>
+                    <p class="text-gray-300 mt-1 leading-relaxed">
+                        Engineered a foundation for networked applications covering <strong class="text-green-400">TCP socket client-server</strong> models, concurrent multithreading, robust network error recovery, and byte streaming.
+                    </p>
+                </div>
+                <div>
+                    <div class="text-white font-semibold flex items-center justify-between">
+                        <span>Inflation & Macroeconomic Trend Analysis</span>
+                        <span class="text-xs text-gray-500">Oct 2024 - Nov 2024</span>
+                    </div>
+                    <p class="text-gray-300 mt-1 leading-relaxed">
+                        Analyzed macroeconomic datasets and GDP correlations via Python, employing <strong class="text-green-400">Linear Regression</strong> and data framing techniques.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+      <!-- offline_modules.txt -->
+      <section class="mb-8 group">
+        <h2 class="text-lg sm:text-xl font-bold mb-3 flex items-center">
+          <span class="text-gray-500 mr-2">reincarnation@nzz:~$</span>
+          <span class="border-b border-[#00ff41]">cat offline_modules.txt</span>
+        </h2>
+        <div
+          class="pl-2 sm:pl-6 border-l-2 border-green-900/40 group-hover:border-green-600 transition-colors duration-300 text-sm space-y-2"
+        >
+          <p class="text-gray-300">
+            >
+            <span class="text-white font-semibold">Hardware Engineering:</span>
+            Custom PC architectures, workstation tuning, mechanical keyboard
+            modifications (MonsGeek M1 V5).
+          </p>
+          <p class="text-gray-300">
+            >
+            <span class="text-white font-semibold">Audio & Esports:</span>
+            Techno, drum 'n' bass, Rap, Metall core | Dota 2, CS2.
+          </p>
+        </div>
+      </section>
+
+      <section class="group mb-8">
+        <h2 class="text-lg sm:text-xl font-bold mb-4 flex items-center">
+          <span class="text-gray-500 mr-2">reincarnation@nzz:~$</span>
+          <span class="border-b border-[#00ff41]">./contact.sh --uplink</span>
+        </h2>
+        <div
+          class="pl-2 sm:pl-6 flex flex-wrap gap-3 border-l-2 border-green-900/40 group-hover:border-green-600 transition-colors duration-300"
+        >
+          <a
+            href="https://github.com/krinzhanovskyi"
+            target="_blank"
+            class="term-link inline-block"
+          >
+            [ <span class="font-bold">GITHUB</span> ]
+          </a>
+          <a
+            href="https://t.me/krinzhanovskyi"
+            target="_blank"
+            class="term-link inline-block"
+          >
+            [ <span class="font-bold">TELEGRAM</span> ]
+          </a>
+          <a
+            href="mailto:krizhanovskyi.alex@gmail.com"
+            class="term-link inline-block"
+          >
+            [ <span class="font-bold">EMAIL</span> ]
+          </a>
+        </div>
+      </section>
+
+      <div class="text-gray-600 text-sm flex items-center">
+        <span>reincarnation@nzz:~$</span>
+        <span
+          class="inline-block w-2 h-4 bg-green-500 animate-pulse align-middle ml-2"
+        ></span>
+      </div>
+    </main>
+
     <script src="matrix.js"></script>
     <script src="app.js"></script>
   </body>
