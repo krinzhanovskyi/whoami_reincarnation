@@ -28,7 +28,7 @@ This project is a web-based portfolio designed to look and function like a class
 1. Clone the repository:
 
    ```bash
-   git clone git@github.com:YourUsername/whoami_reincarnation.git
+   git clone git@github.com:krinzhanovskyi/whoami_reincarnation.git
    ```
 
 2. Open `index.html` in any modern web browser.
